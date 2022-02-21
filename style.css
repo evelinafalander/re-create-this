@@ -73,9 +73,6 @@ img {
 .topPart {
   grid-column: 2;
 }
-.mainGrid {
-  grid-column: 1 / span 3;
-}
 
 h2 {
   grid-row: 2;
@@ -133,14 +130,44 @@ ul {
 
 .myBox {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
 }
+.myBox p:nth-child(2) {
+  border-style: solid;
+  border-radius: 5px;
+  border-color: rgb(180, 178, 178);
+  padding: 2px;
+  border-width: 0.8px;
+}
+.myBox p:nth-child(3) {
+  color: grey;
+  font-size: 0.9rem;
+}
+.myBox p:nth-child(4) {
+  color: grey;
+  font-size: 0.8rem;
+  font-weight: var(--lightF);
+}
+.colorSVG {
+  color: rgb(108, 0, 151);
+}
+
+/*.light {
+  font-weight: var(--lightF);
+  color: grey;
+  font-size: 0.9rem;
+}*/
 
 /*BOTTOM PART of main (the main grid)*/
 
 .mainGrid {
+  grid-column: 1 / span 3;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(100px, 200px));
   gap: 1.5rem;
+  margin-left: 3rem;
 }
 .imgContainer {
   position: relative;
