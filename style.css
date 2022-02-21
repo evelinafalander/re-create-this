@@ -1,24 +1,102 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap");
 
 /* font-family: 'Inter', sans-serif;
- weights: 100 - 600
+ weights: 100 - 800
 */
 
 * {
   margin: 0;
   box-sizing: border-box;
 }
+body {
+  font-family: var(--myfont);
+}
 
 /*variables*/
 :root {
   --myfont: "Inter", sans-serif;
+  --lightF: 200;
+}
+
+/* Genaral styling */
+button {
+  border-style: none;
+  border-radius: 1.5rem;
+  padding: 0.4rem 0.7rem 0.4rem 0.7rem;
 }
 
 /*HEADER*/
-h1 {
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   font-family: var(--myfont);
+  margin-top: 0.5rem;
+  border-bottom: solid rgb(197, 197, 197) 0.7px;
+}
+h1 {
   font-weight: 800;
+  grid-column: 2;
+  text-align: center;
 }
 .logoSpan {
   font-weight: 300;
 }
+
+.headerButtons {
+  grid-column: 3;
+  justify-self: end;
+  padding-right: 1rem;
+}
+
+.headerButtons button {
+  margin-right: 0.5rem;
+}
+
+.redButton {
+  background-color: rgb(185, 43, 43);
+  color: white;
+}
+
+/*MAIN*/
+img {
+  max-width: 100%;
+}
+#mainBigGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 1rem;
+}
+
+.topPart {
+  grid-column: 2;
+}
+.mainGrid {
+  grid-column: 1 / span 3;
+}
+
+/*TOP PART of main*/
+.topPart figcaption {
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.topPart span {
+  font-weight: var(--lightF);
+  font-size: 0.7rem;
+}
+
+.infoBox {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  gap: 1rem;
+}
+
+.infoBox p {
+  font-size: 1.3rem;
+}
+
+/*BOTTOM PART of main (the main grid)*/
