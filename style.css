@@ -17,6 +17,7 @@ body {
   --myfont: "Inter", sans-serif;
   --lightF: 300;
   --smallHeader: 1em;
+  --myGrey: rgb(184, 180, 180);
 }
 
 /* Genaral styling */
@@ -33,7 +34,7 @@ header {
   grid-template-columns: 1fr 1fr 1fr;
   font-family: var(--myfont);
   margin-top: 0.5rem;
-  border-bottom: solid rgb(197, 197, 197) 0.7px;
+  border-bottom: solid var(--myGrey) 0.7px;
 }
 h1 {
   font-weight: 800;
@@ -80,6 +81,8 @@ h2 {
   text-align: center;
   font-size: var(--smallHeader);
   font-weight: 500;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 main h3 {
   grid-column: 1 / span 3;
@@ -88,6 +91,10 @@ main h3 {
   font-weight: 500;
 }
 /*TOP PART of main*/
+
+.topPart {
+  border-bottom: solid var(--myGrey) 0.9px;
+}
 .topPart figcaption {
   text-align: center;
   font-size: 1.4rem;
@@ -109,23 +116,48 @@ h2 span {
   display: flex;
   justify-content: space-between;
   padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
   text-align: center;
   gap: 1rem;
 }
 
 .infoBox p {
   font-size: 1.3rem;
+  border-left: solid rgb(184, 180, 180) 0.9px;
+  padding-left: 1rem;
+}
+.infoBox p:nth-child(1) {
+  border-left: none;
+  padding: 0;
 }
 
+.list {
+  border-top: solid var(--myGrey) 0.9px;
+}
 .list h3 {
   font-size: var(--smallHeader);
   font-weight: 500;
   text-align: start;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
 }
 ul {
   list-style-type: none;
   padding: 0;
+  line-height: 1.3rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+.myButtons {
+  padding-top: 1rem;
+  padding-bottom: 1.3rem;
+}
+.myButtons button:nth-child(2) {
+  margin-left: 0.7rem;
+}
+
+.myButtons svg {
+  padding-top: 0.3rem;
 }
 
 .myBox {
@@ -137,7 +169,7 @@ ul {
 .myBox p:nth-child(2) {
   border-style: solid;
   border-radius: 5px;
-  border-color: rgb(180, 178, 178);
+  border-color: var(--myGrey);
   padding: 2px;
   border-width: 0.8px;
 }
@@ -167,7 +199,7 @@ ul {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(100px, 200px));
   gap: 1.5rem;
-  margin-left: 3rem;
+  justify-content: center;
 }
 .imgContainer {
   position: relative;
@@ -179,4 +211,15 @@ ul {
   position: absolute;
   top: 71%;
   color: white;
+}
+
+/*MEDIA QERY*/
+
+@media screen and (min-width: 1105px) {
+  .infoBox p {
+    padding-left: 3rem;
+  }
+  .infoBox p:nth-child(1) {
+    padding-left: 1rem;
+  }
 }
