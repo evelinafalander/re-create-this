@@ -21,11 +21,19 @@ body {
   --myGrey: rgb(184, 180, 180);
 }
 
-/* Genaral styling */
+/* Genaral button styling */
 button {
   border-style: none;
   border-radius: 1.5rem;
   padding: 0.4rem 0.7rem 0.4rem 0.7rem;
+}
+
+.redButton:hover {
+  background-color: rgb(243, 55, 71);
+}
+
+button:hover {
+  background-color: rgb(179, 154, 206);
 }
 
 /*HEADER*/
@@ -57,6 +65,9 @@ h1 {
 
 .headerButtons svg {
   align-self: center;
+}
+.headerButtons svg:hover {
+  color: rgb(179, 154, 206);
 }
 .headerButtons button {
   margin-right: 0.5rem;
@@ -207,6 +218,9 @@ h2 span {
 .imgContainer {
   position: relative;
 }
+.imgContainer:hover {
+  opacity: 0.5;
+}
 .imgText {
   background-color: rgba(75, 75, 75, 0.473);
   padding: 0.5rem 0rem 0.5rem 0.7rem;
@@ -254,6 +268,15 @@ footer p {
   grid-row: 2;
   border-bottom: solid var(--myGrey) 0.9px;
   padding-top: 2rem;
+}
+li:nth-child(2):hover {
+  color: rgb(179, 154, 206);
+}
+li:nth-child(3):hover {
+  color: rgb(179, 154, 206);
+}
+li:nth-child(4):hover {
+  color: rgb(179, 154, 206);
 }
 
 /*MEDIA QERY*/
